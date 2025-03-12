@@ -1,0 +1,12 @@
+services:
+  nuxt:
+    image: node:22
+    container_name: nuxt3_app
+    working_dir: /app/src
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - '3000:3000'
+    # tty: true
+    command: sh -c "yarn install && yarn dev"
