@@ -1,11 +1,11 @@
 services:
   nuxt:
     image: node:22
-    container_name: nuxt3_app
+    container_name: nuxt3_front
     working_dir: /app/src
     volumes:
       - ./:/app
-      - /app/node_modules
+      # - /app/node_modules
     ports:
       - '3000:3000'
     # tty: true
